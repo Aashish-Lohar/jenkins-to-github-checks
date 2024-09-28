@@ -21,8 +21,7 @@ pipeline {
         stage('third') {
             steps {
                 script{
-                    publishChecks annotations: [[endLine: 10, message: 'annotation message', path: 'Jenkinsfile', rawDetails: 'raw details', startLine: 5, title: 'test annotation']], 
-                    detailsURL: 'jenkinsurl', 
+                    publishChecks annotations: [[endLine: 10, message: 'annotation message', path: 'Jenkinsfile', rawDetails: 'raw details', startLine: 5, title: 'test annotation']],  
                     name: 'testing annotations', 
                     summary: 'summary', 
                     text: 'text', 
