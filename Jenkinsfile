@@ -18,5 +18,17 @@ pipeline {
                 }
             }
         }
+        stage('third') {
+            steps {
+                script{
+                    publishChecks annotations: [[endLine: 10, message: 'annotation message', path: 'Jenkinsfile', rawDetails: 'raw details', startLine: 5, title: 'test annotation']], 
+                    detailsURL: 'jenkinsurl', 
+                    name: 'testing annotations', 
+                    summary: 'summary', 
+                    text: 'text', 
+                    title: 'title'
+                }
+            }
+        }
     }
 }
