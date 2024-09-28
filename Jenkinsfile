@@ -33,7 +33,7 @@ pipeline {
                         echo 'inside with checks and publish checks'
                         publishChecks name: 'test-publish-checks', summary: 'testing summary', text: 'test-publish-checks-text', title: 'test-publish-checks-title'
                     }
-
+                    publishChecks name: 'test1', summary: 'testing summary', text: 'test1-publish-checks-text', title: 'test1-publish-checks-title'
                 }
             }
         }
