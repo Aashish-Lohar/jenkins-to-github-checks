@@ -5,6 +5,7 @@ pipeline {
         stage('first') {
             steps {
                 script{
+                    cleanWs()
                     // command is a variable where you can store a command as a string, allowing you to execute it in a pipeline step at a later stage.
                     def command = "curl google.com"
                     sh(script: "echo '## + $command' >> logsfile.txt")
